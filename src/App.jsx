@@ -1,11 +1,13 @@
 import { Component } from 'react';
 import './App.css';
+import LandingPage from './LandingPage';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       counter: 0,
+      curPage: "LandingPage"
     }
   }
 
@@ -20,15 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <button name="testButton" onClick={(e) => this.buttonClick(e)}>
-            Click Me and Check the Console
-          </button>
-          <button name="testButton2" onClick={(e) => this.buttonClick(e)}>
-            Click Me and Check the Console
-          </button>
-          <p>Counter: {this.state.counter}</p>
-        </header>
+        <LandingPage/>
       </div>
     );
   }
