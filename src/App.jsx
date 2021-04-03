@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import './App.css';
 import LandingPage from './LandingPage';
+import PartnersPage from './PartnersPage';
 
 class App extends Component {
   constructor(props) {
@@ -19,10 +20,29 @@ class App extends Component {
     })
   }
 
+  showPartners = (e) => {
+    // e.preventDefault();
+    // console.log(e.target.name);
+    console.log("hey there");
+    this.setState({
+      curPage: "PartnersPage"
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <LandingPage/>
+        {/* {this.state.curPage == "LandingPage" ? <LandingPage showPartnersFxn={this.showPartners}/> : <PartnersPage/>} */}
+        {(() => {
+          switch (this.state.curPage) {
+            case "LandingPage":
+              return <LandingPage showPartnersFxn={this.showPartners}/>;
+            case "PartnersPage":
+              return <PartnersPage/>;
+            default:
+              return <LandingPage showPartnersFxn={this.showPartners}/>;
+          }
+        })()}
       </div>
     );
   }
