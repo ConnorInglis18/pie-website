@@ -1,37 +1,40 @@
 .LandingPage {
-    background-color: #00274C;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  background-color: #00274c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 65px;
-    text-align: center;
-    width: 100%;
-    padding-top: 40px;
-    padding-bottom: 84px;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 65px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 84px;
 }
 
 p {
-    padding-left: 195px;
-    padding-right: 195px;
+  padding-left: 195px;
+  padding-right: 195px;
 }
 
 button {
-    width: 353px;
-    height: 75px;
-    background: #FFCB05;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 24px;
-    line-height: 33px;
-    text-align: center;
+  width: 353px;
+  height: 75px;
+  background: #ffcb05;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
 
-    color: #000000;
+  color: #000000;
+}
+
+.viewPartners {
+  width: 353px;
 }

@@ -8,28 +8,33 @@ class Header extends Component {
 
   render() {
     return (
-    <div className="Header">
-        <button name="homePage" onClick={event => {
-            this.props.showPageFxn(event, "LandingPage");
-        }}>
-            home
-        </button>
-        <button name="partnersPage" onClick={event => {
-            this.props.showPageFxn(event, "PartnersPage");
-        }}>
-            partners
-        </button>
-        <button name="joinPage" onClick={event => {
-            this.props.showPageFxn(event, "JoinPage");
-        }}>
-            join
-        </button>
-        <button name="contactPage" onClick={event => {
-            this.props.showPageFxn(event, "ContactPage");
-        }}>
-            contact
-        </button>
-    </div>
+        <div className="Header">
+            <button className="homePage" onClick={event => {
+                this.props.showPageFxn(event, "LandingPage");
+            }}>
+                <img className="michiganLogo" src={"https://brand.umich.edu/assets/brand/style-guide/logo-guidelines/Block_M-Hex.png"} alt=""/>
+                <h1 className="title">PIE</h1>
+            </button>
+            <div>
+                <button className="partnersButton" onClick={event => {
+                    this.props.showPageFxn(event, "PartnersPage");
+                }}>
+                    Our Partners
+                </button>
+                <button className="contactButton" onClick={event => {
+                    this.props.showPageFxn(event, "ContactPage");
+                }}>
+                    Contact Us
+                </button>
+            </div>
+            <div className="joinWrapper">
+                <button className="joinButton" onClick={event => {
+                    this.props.showPageFxn(event, "JoinPage");
+                }}>
+                    Join PIE
+                </button>
+            </div>
+        </div>
     );
   }
 }
