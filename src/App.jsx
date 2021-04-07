@@ -1,7 +1,10 @@
 import { Component } from 'react';
 import './App.css';
+import JoinPage from './JoinPage';
 import LandingPage from './LandingPage';
 import PartnersPage from './PartnersPage';
+import ContactPage from './ContactPage';
+import Header from './Header';
 
 class App extends Component {
   constructor(props) {
@@ -12,35 +15,30 @@ class App extends Component {
     }
   }
 
-  buttonClick = (e) => {
+  showPage = (e, pageType) => {
     e.preventDefault();
-    console.log(e.target.name);
+    console.log("switching to " + pageType);
     this.setState({
-      counter: this.state.counter + 1
-    })
-  }
-
-  showPartners = (e) => {
-    // e.preventDefault();
-    // console.log(e.target.name);
-    console.log("hey there");
-    this.setState({
-      curPage: "PartnersPage"
+      curPage: pageType
     })
   }
 
   render() {
     return (
       <div className="App">
-        {/* {this.state.curPage == "LandingPage" ? <LandingPage showPartnersFxn={this.showPartners}/> : <PartnersPage/>} */}
+        <Header showPageFxn={this.showPage}/>
         {(() => {
           switch (this.state.curPage) {
             case "LandingPage":
-              return <LandingPage showPartnersFxn={this.showPartners}/>;
+              return <LandingPage showPageFxn={this.showPage}/>;
             case "PartnersPage":
               return <PartnersPage/>;
+            case "JoinPage":
+              return <JoinPage/>;
+            case "ContactPage":
+              return <ContactPage/>;
             default:
-              return <LandingPage showPartnersFxn={this.showPartners}/>;
+              return <LandingPage showPageFxn={this.showPage}/>;
           }
         })()}
       </div>

@@ -10,9 +10,6 @@ class PartnersPage extends Component {
     return (
     <div className="PartnersPage">
         <p>Partners Page</p>
-        <button name="viewPartners">
-        VIEW OUR PARTNERS
-        </button>
     </div>
     );
   }
