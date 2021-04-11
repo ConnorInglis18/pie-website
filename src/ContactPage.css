@@ -1,0 +1,47 @@
+.ContactPage {
+    background-color: #EDECEC;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+    font-size: 36px;
+}
+
+#questionsText {
+    line-height: 0px;
+}
+
+.contactForm {
+    position: relative;
+    width: 600px;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.contactForm textarea {
+    font-size: 36px;
+    width: 100%;
+    resize: vertical;
+}
+
+label {
+    text-align: left;
+    display: block;
+}
+
+input {
+    height: 76px;
+}
+
+::placeholder {
+    color: #EDECEC;
+}
+
+#submitQuestion {
+    width: 320px;
+    height: 65px;
+    margin-bottom: 50px;
+}
