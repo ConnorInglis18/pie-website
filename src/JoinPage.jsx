@@ -74,7 +74,7 @@ class JoinPage extends Component {
             id="JoinDescription"
             name="JoinDescription"
             type="text"
-            placeholder="Please provide a description of you or your company and how you would contribute to the PIE ..."
+            placeholder="Please provide a description of you or your company and how you would contribute to the PIE. Users will be able to see this description..."
             cols="4"
             required
           />
@@ -83,7 +83,7 @@ class JoinPage extends Component {
             id="JoinWebsiteUrl"
             name="JoinWebsiteUrl"
             type="text"
-            placeholder="John Doe"
+            placeholder="www.mysite.com"
             required
           />
           <label>Mentor Contact (Optional):</label>
@@ -91,7 +91,7 @@ class JoinPage extends Component {
             id="JoinMentorContact"
             name="JoinMentorContact"
             type="text"
-            placeholder="If you would like to become a mentor, please provide a way for mentees to contact you"
+            placeholder="johndoe@email.com, 555-555-5555, etc"
           />
           <input type="submit" id="submitRequest"></input>
         </form>
