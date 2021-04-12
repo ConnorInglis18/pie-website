@@ -1,4 +1,9 @@
 .PartnersPage {
+  width: 100%;
+  display: flex;
+}
+
+.PartnersPageList {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,7 +12,7 @@
   background-color: #edecec;
 }
 
-.PartnersPage Button {
+.PartnersPageList Button {
   border: none;
   cursor: pointer;
 }
@@ -32,7 +37,7 @@
   vertical-align: text-top;
   vertical-align: top;
   width: 100%;
-  height: 200px;
+  height: 220px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -58,7 +63,85 @@
 }
 
 .PartnerDescription {
-  font-family: "IBM Plex Sans Condensed";
+  font-family: "Nunito Sans";
   font-style: normal;
   font-size: 24px;
+}
+
+#PartnerSidePanel {
+  width: 900px;
+  background-color: #2f65a7;
+  position: relative;
+}
+
+#PartnerSideClose {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #ffcb05;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #131516;
+}
+
+#PartnerSideImage {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  margin-top: 40px;
+}
+
+#PartnerSideInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#PartnerSideName {
+  font-family: "IBM Plex Sans Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  text-align: center;
+  line-height: 62px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #ffcb05;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#PartnerSideDescription {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: left;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  /* Text on Dark */
+
+  color: #ffffff;
+  margin: 0px;
 }
