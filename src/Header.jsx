@@ -13,6 +13,7 @@ class Header extends Component {
                 this.props.showPageFxn(event, "LandingPage");
             }}>
                 <img className="michiganLogo" src={"https://brand.umich.edu/assets/brand/style-guide/logo-guidelines/Block_M-Hex.png"} alt="University of Michigan Logo"/>
+                <h1 className="title">|</h1>
                 <h1 className="title">PIE</h1>
             </button>
             <div>

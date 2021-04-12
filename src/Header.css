@@ -1,13 +1,20 @@
-button {
-  width: 100px;
-}
-
 .Header {
+  position: sticky;
+  top: 0px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
   background-color: #00274c;
+  z-index: 100;
+}
+
+.Header button {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
 }
 
 .title {
@@ -35,7 +42,6 @@ button {
 }
 
 .partnersButton {
-  font-size: 24px;
   width: 180px;
   background-color: Transparent;
   background-repeat: no-repeat;
@@ -48,7 +54,6 @@ button {
 }
 
 .contactButton {
-  font-size: 24px;
   width: 180px;
   background-color: Transparent;
   background-repeat: no-repeat;
@@ -62,7 +67,7 @@ button {
 
 .joinWrapper {
   width: 200px;
-  height: 100px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;

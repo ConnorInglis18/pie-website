@@ -1,0 +1,79 @@
+.JoinPage {
+  background-color: #edecec;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: black;
+  font-size: 24px;
+  z-index: 0;
+}
+
+#JoinPageTopText {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  line-height: 0px;
+  font-size: 24px;
+}
+
+#JoinForm {
+  position: relative;
+  width: 700px;
+  float: left;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#JoinForm input {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+  font-size: 24px;
+  padding-left: 10px;
+  height: 60px;
+}
+
+#JoinForm textarea {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  float: left;
+  margin-bottom: 30px;
+  font-size: 24px;
+  resize: vertical;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#JoinForm label {
+  text-align: left;
+  display: block;
+  width: 100%;
+  font-size: 24px;
+}
+
+::placeholder {
+  color: #a5a5a5;
+}
+
+#submitRequest {
+  width: 320px !important;
+  height: 65px;
+  background: #ffcb05;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+
+  color: #000000;
+}
+
+#submitRequest:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
+}

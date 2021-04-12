@@ -1,4 +1,31 @@
 .App {
   text-align: center;
   width: 100%;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: normal;
+}
+
+#pageContent {
+  width: 100%;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
+}
+
+a:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
 }

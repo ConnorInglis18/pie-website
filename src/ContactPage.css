@@ -1,47 +1,78 @@
 .ContactPage {
-    background-color: #EDECEC;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: black;
-    font-size: 36px;
+  background-color: #edecec;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: black;
+  font-size: 24px;
 }
 
-#questionsText {
-    line-height: 0px;
+#QuestionsText {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  line-height: 0px;
+  font-size: 24px;
 }
 
-.contactForm {
-    position: relative;
-    width: 600px;
-    float: left;
-    margin-bottom: 30px;
+#ContactForm {
+  position: relative;
+  width: 700px;
+  float: left;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.contactForm textarea {
-    font-size: 36px;
-    width: 100%;
-    resize: vertical;
+#ContactForm input {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+  font-size: 24px;
+  padding-left: 10px;
+  height: 60px;
 }
 
-label {
-    text-align: left;
-    display: block;
+#ContactForm textarea {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  float: left;
+  margin-bottom: 30px;
+  font-size: 24px;
+  resize: vertical;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
-input {
-    height: 76px;
+#ContactForm label {
+  text-align: left;
+  display: block;
+  width: 100%;
+  font-size: 24px;
 }
 
 ::placeholder {
-    color: #EDECEC;
+  color: #a5a5a5;
 }
 
 #submitQuestion {
-    width: 320px;
-    height: 65px;
-    margin-bottom: 50px;
+  width: 320px !important;
+  height: 65px;
+  background: #ffcb05;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+
+  color: #000000;
+}
+
+#submitQuestion:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
 }

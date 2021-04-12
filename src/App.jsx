@@ -15,32 +15,39 @@ class App extends Component {
     }
   }
 
+  componentDidMount = () => {
+    window.scrollTo(0,0);
+  }
+
   showPage = (e, pageType) => {
     e.preventDefault();
     console.log("switching to " + pageType);
     this.setState({
       curPage: pageType
     })
+    window.scrollTo(0,0)
   }
 
   render() {
     return (
       <div className="App">
         <Header showPageFxn={this.showPage}/>
-        {(() => {
+        <div id="pageContent">
+          {(() => {
           switch (this.state.curPage) {
             case "LandingPage":
               return <LandingPage showPageFxn={this.showPage}/>;
             case "PartnersPage":
               return <PartnersPage/>;
             case "JoinPage":
-              return <JoinPage/>;
+              return <JoinPage showPageFxn={this.showPage}/>;
             case "ContactPage":
-              return <ContactPage/>;
+              return <ContactPage showPageFxn={this.showPage}/>;
             default:
               return <LandingPage showPageFxn={this.showPage}/>;
           }
         })()}
+        </div>
       </div>
     );
   }
