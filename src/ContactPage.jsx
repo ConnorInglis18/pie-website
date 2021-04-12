@@ -75,28 +75,6 @@ class ContactPage extends Component {
             required
           />
           <input type="submit" id="submitQuestion"></input>
-
-
-                  {/* <label>Name</label>
-                  <textarea name="name" placeholder="Jane Doe" onChange={event => {
-                    this.setState({name: event.target.value});
-                  }} ref="name"></textarea>
-                <div className="contactForm">
-                  <label htmlFor="email">Email</label>
-                  <textarea name="email" placeholder="johndoe@email.com" ref="email"></textarea>
-                </div>
-                <div className="contactForm">
-                  <label htmlFor="question">Question</label>
-                  <textarea name="question" placeholder="Question" rows="4" ref="question"></textarea>
-                </div>
-                <button id="submitQuestion" onClick={() => {
-                  window.alert(`Thank you for submitting a question, ${this.state.name}`);
-                  this.refs.name.value = '';
-                  this.refs.email.value = '';
-                  this.refs.question.value = '';
-                }}>
-                  Submit Question
-                </button> */}
         </form>
       </div>
     );
