@@ -9,7 +9,7 @@ class ContactPage extends Component {
 
   render() {
     return (
-    <div className="ContactPage">
+      <div className="ContactPage">
         <p id="questionsText">Questions? We would love to hear them.</p>
         <div className="contactForm">
           <label htmlFor="name">Name</label>
@@ -25,13 +25,15 @@ class ContactPage extends Component {
           <label htmlFor="question">Question</label>
           <textarea name="question" placeholder="Question" rows="4" ref="question"></textarea>
         </div>
-        <button id="submitQuestion" onClick={event => {
+        <button id="submitQuestion" onClick={() => {
           window.alert(`Thank you for submitting a question, ${this.state.name}`);
           this.refs.name.value = '';
           this.refs.email.value = '';
           this.refs.question.value = '';
-        }}>Submit Question</button>
-    </div>
+        }}>
+          Submit Question
+        </button>
+      </div>
     );
   }
 }

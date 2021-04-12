@@ -8,9 +8,9 @@ class JoinPage extends Component {
 
   render() {
     return (
-    <div className="JoinPage">
-        <p>Join Page</p>
-    </div>
+      <div className="JoinPage">
+          <p>Join Page</p>
+      </div>
     );
   }
 }

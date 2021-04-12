@@ -1,31 +1,22 @@
 import { Component } from 'react';
 import './PartnersPage.css';
-import background from "./images/ssd_photo.jpg"
+import {partnersJSON} from "./backend/partnerInfoJSON";
 
 class PartnersPage extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
-    <div className="PartnersPage">
-        <div className="PartnerComponent">
-          <img className="PartnerImage" src="./images/ssd_photo.jpg"></img>
-          <p className="PartnerName">Services for Students with Disabilities</p>
-          <p className="PartnerDescription">Description will go here</p>
-        </div>
-        <div className="PartnerComponent">
-          <img className="PartnerImage" src="./images/ssd_photo.jpg"></img>
-          <p className="PartnerName">Services for Students with Disabilities</p>
-          <p className="PartnerDescription">Description will go here</p>
-        </div>
-        <div className="PartnerComponent">
-          <img className="PartnerImage" src="./images/ssd_photo.jpg"></img>
-          <p className="PartnerName">Services for Students with Disabilities</p>
-          <p className="PartnerDescription">Description will go here</p>
-        </div>
-    </div>
+      <div className="PartnersPage">
+        {partnersJSON.map(partner => {
+          return (
+            <div className="PartnerComponent">
+              <img className="PartnerImage" src={partner.imgSrc} alt="PIE Partner" />
+              <p className="PartnerName">{partner.name}</p>
+              <p className="PartnerDescription">{partner.description}</p>
+              <a href={partner.websiteUrl}>View Website</a>
+            </div>
+          )
+        })}
+      </div>
     );
   }
 }
