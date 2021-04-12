@@ -77,7 +77,7 @@ class PartnersPage extends Component {
             <div id="PartnerSideInfo">
               <p id="PartnerSideName">{partnersJSON[this.state.selectedIdx].name}</p>
               <p id="PartnerSideDescription">{partnersJSON[this.state.selectedIdx].description}</p>
-              <button>View Website</button>
+              <a id="PartnerSideViewWebsite" href={partnersJSON[this.state.selectedIdx].websiteUrl} target="_blank">View Website</a>
             </div>
           </div> : <div></div>
         }
