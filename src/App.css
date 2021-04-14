@@ -29,3 +29,57 @@ a:focus {
   outline: none;
   box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
 }
+
+#accessibilityContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  width: 570px;
+  height: 699px;
+
+  float: right;
+  bottom: -120px;
+  right: -50px;
+
+
+  font-size: x-large;
+}
+
+#accessibilityBtnSection {
+  display: grid;
+  grid-template-columns: 221px 221px;
+}
+
+.accessibilityBtn {
+  width: 221px;
+  height: 171px;
+  font-size: x-large;
+}
+
+#accessibilityText {
+  width: 442px;
+  height: 120px;
+  background-color: #2F65A7;
+  color: white;
+  line-height: 120px;
+}
+
+#hideAccessBtn {
+  width: 442px;
+  height: 100px;
+  font-size: x-large;
+}
+
+#showAccessBtn {
+  position: fixed;
+  width: 241px;
+  height: 117px;
+
+  float: right;
+  bottom: 20px;
+  right: 20px;
+
+  font-size: x-large;
+}
