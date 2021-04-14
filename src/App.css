@@ -1,10 +1,17 @@
 .App {
   text-align: center;
   width: 100%;
-  font-family: "OpenDyslexic2";
   font-style: normal;
   font-weight: normal;
 }
+
+/* .dyslexic {
+  font-family: "OpenDyslexic2";
+}
+
+.notDyslexic {
+  font-family: "Nunito Sans";
+} */
 
 #pageContent {
   width: 100%;

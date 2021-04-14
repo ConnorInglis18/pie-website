@@ -9,7 +9,7 @@ class Header extends Component {
   render() {
     return (
         <div className="Header">
-            <button className="homePage" onClick={event => {
+            <button className="homePage" style={this.props.applyStylesFxn(24, "Nunito Sans")} onClick={event => {
                 this.props.showPageFxn(event, "LandingPage");
             }}>
                 <img className="michiganLogo" src={"https://brand.umich.edu/assets/brand/style-guide/logo-guidelines/Block_M-Hex.png"} alt="University of Michigan Logo"/>
@@ -17,19 +17,19 @@ class Header extends Component {
                 <h1 className="title">PIE</h1>
             </button>
             <div>
-                <button className="partnersButton" onClick={event => {
+                <button className="partnersButton" style={this.props.applyStylesFxn(24, "Nunito Sans")} onClick={event => {
                     this.props.showPageFxn(event, "PartnersPage");
                 }}>
                     Our Partners
                 </button>
-                <button className="contactButton" onClick={event => {
+                <button className="contactButton" style={this.props.applyStylesFxn(24, "Nunito Sans")} onClick={event => {
                     this.props.showPageFxn(event, "ContactPage");
                 }}>
                     Contact Us
                 </button>
             </div>
             <div className="joinWrapper">
-                <button className="joinButton" onClick={event => {
+                <button className="joinButton" style={this.props.applyStylesFxn(24, "Nunito Sans")} onClick={event => {
                     this.props.showPageFxn(event, "JoinPage");
                 }}>
                     Join PIE

@@ -12,7 +12,16 @@ class App extends Component {
     this.state = {
       counter: 0,
       curPage: "LandingPage",
-      showAccessMenu: false
+      showAccessMenu: false,
+      isDyslexicFont: false,
+      fontMultiplier: 1
+    }
+  }
+
+  applyStyles = (defaultFontSize, defaultFont) => {
+    return {
+        "font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : defaultFont,
+        "font-size": this.state.fontMultiplier * defaultFontSize + "px"
     }
   }
 
@@ -47,28 +56,40 @@ class App extends Component {
 
   increaseFont = (e) => {
     e.preventDefault();
-    alert("+font");
+    console.log("+font");
+    this.setState({
+      fontMultiplier: 0.15 + this.state.fontMultiplier
+    });
   }
 
   decreaseFont = (e) => {
     e.preventDefault();
-    alert("-font");
+    console.log("-font");
+    this.setState({
+      fontMultiplier: this.state.fontMultiplier - 0.15
+    });
   }
 
   toDyslexic = (e) => {
     e.preventDefault();
-    alert("to dyslexic");
+    console.log("to dyslexic");
+    this.setState({
+      isDyslexicFont: true
+    });
   }
 
   fromDyslexic = (e) => {
     e.preventDefault();
-    alert("from dyslexic");
+    console.log("from dyslexic");
+    this.setState({
+      isDyslexicFont: false
+    });
   }
 
   render() {
     return (
-      <div className="App">
-        <Header showPageFxn={this.showPage}/>
+      <div className={this.state.isDyslexicFont ? "App dyslexic" : "App notDyslexic"}>
+        <Header showPageFxn={this.showPage} applyStylesFxn={this.applyStyles}/>
         <div id="pageContent">
           {(() => {
           switch (this.state.curPage) {

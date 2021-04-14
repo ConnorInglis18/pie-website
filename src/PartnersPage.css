@@ -63,7 +63,7 @@
 }
 
 .PartnerDescription {
-  font-family: "Nunito Sans";
+  /* font-family: "Nunito Sans"; */
   font-style: normal;
   font-size: 24px;
 }
@@ -87,7 +87,7 @@
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
 
-  font-family: "Nunito Sans";
+  /* font-family: "Nunito Sans"; */
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
@@ -130,7 +130,7 @@
 }
 
 #PartnerSideDescription {
-  font-family: "Nunito Sans";
+  /* font-family: "Nunito Sans"; */
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
@@ -156,7 +156,7 @@
   align-items: center;
   justify-content: center;
 
-  font-family: "Nunito Sans";
+  /* font-family: "Nunito Sans"; */
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
