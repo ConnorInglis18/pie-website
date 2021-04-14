@@ -14,7 +14,6 @@
   margin-top: 40px;
   margin-bottom: 40px;
   line-height: 0px;
-  font-size: 24px;
 }
 
 #ContactForm {
@@ -32,7 +31,6 @@
   width: 100%;
   float: left;
   margin-bottom: 30px;
-  font-size: 24px;
   padding-left: 10px;
   height: 60px;
 }
@@ -43,7 +41,6 @@
   height: 200px;
   float: left;
   margin-bottom: 30px;
-  font-size: 24px;
   resize: vertical;
   padding-top: 10px;
   padding-left: 10px;
@@ -53,7 +50,6 @@
   text-align: left;
   display: block;
   width: 100%;
-  font-size: 24px;
 }
 
 ::placeholder {
@@ -65,7 +61,6 @@
   height: 65px;
   background: #ffcb05;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: 24px;
   line-height: 33px;
   text-align: center;
 

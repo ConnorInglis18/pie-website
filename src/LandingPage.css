@@ -7,7 +7,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 
-  font-size: 48px;
   line-height: 65px;
   text-align: center;
   width: 100%;
@@ -15,7 +14,6 @@
 }
 
 .LandingPage p {
-  /* font-family: "OpenDyslexic2"; */
   padding-left: 195px;
   padding-right: 195px;
 }
@@ -25,7 +23,6 @@
   height: 75px;
   background: #ffcb05;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: 24px;
   line-height: 33px;
   text-align: center;
 

@@ -34,8 +34,8 @@ class JoinPage extends Component {
   render() {
     return (
       <div className="JoinPage">
-        <p id="JoinPageTopText">Join Partners In Excellence</p>
-        <form id="JoinForm" type="submit" onSubmit={(event) => this.submitRequest(
+        <p style={this.props.applyStylesFxn(24, "Nunito Sans")} id="JoinPageTopText">Join Partners In Excellence</p>
+        <form style={this.props.applyStylesFxn(24, "Nunito Sans")} id="JoinForm" type="submit" onSubmit={(event) => this.submitRequest(
           event,
           document.getElementById("JoinName"),
           document.getElementById("JoinEmail"),
@@ -50,6 +50,7 @@ class JoinPage extends Component {
             name="JoinName"
             type="text"
             placeholder="John Doe"
+            style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
           <label>Email:</label>
@@ -58,6 +59,7 @@ class JoinPage extends Component {
             name="JoinEmail"
             type="text"
             placeholder="johndoe@email.com"
+            style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
           <label>Phone Number (optional):</label>
@@ -68,6 +70,7 @@ class JoinPage extends Component {
             placeholder="555-555-5555"
             pattern="^[0-9(). \-]+$"
             title="Invalid Phone Number"
+            style={this.props.applyStylesFxn(24, "Nunito Sans")}
           />
           <label>Description:</label>
           <textarea
@@ -76,6 +79,7 @@ class JoinPage extends Component {
             type="text"
             placeholder="Please provide a description of you or your company and how you would contribute to the PIE. Users will be able to see this description..."
             cols="4"
+            style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
           <label>Website URL:</label>
@@ -84,6 +88,7 @@ class JoinPage extends Component {
             name="JoinWebsiteUrl"
             type="text"
             placeholder="www.mysite.com"
+            style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
           <label>Mentor Contact (Optional):</label>
@@ -92,8 +97,9 @@ class JoinPage extends Component {
             name="JoinMentorContact"
             type="text"
             placeholder="johndoe@email.com, 555-555-5555, etc"
+            style={this.props.applyStylesFxn(24, "Nunito Sans")}
           />
-          <input type="submit" id="submitRequest"></input>
+          <input style={this.props.applyStylesFxn(24, "Nunito Sans")} type="submit" id="submitRequest"></input>
         </form>
       </div>
     );

@@ -55,17 +55,13 @@
 }
 
 .PartnerName {
-  font-family: "IBM Plex Sans Condensed";
   font-style: normal;
   font-weight: 600;
-  font-size: 48px;
   color: #00274c;
 }
 
 .PartnerDescription {
-  /* font-family: "Nunito Sans"; */
   font-style: normal;
-  font-size: 24px;
 }
 
 #PartnerSidePanel {
@@ -130,10 +126,8 @@
 }
 
 #PartnerSideDescription {
-  /* font-family: "Nunito Sans"; */
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
   line-height: 38px;
   text-align: left;
   margin-top: 10px;
@@ -156,10 +150,8 @@
   align-items: center;
   justify-content: center;
 
-  /* font-family: "Nunito Sans"; */
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
   line-height: 33px;
   display: flex;
   align-items: center;

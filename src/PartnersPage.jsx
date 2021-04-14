@@ -52,17 +52,17 @@ class PartnersPage extends Component {
                 <button key={index} className="PartnerComponent Left" onClick={(e) => this.showSidePanel(e, index)}>
                   <img className="PartnerImage" src={partner.imgSrc} alt="PIE Partner" />
                   <div className="PartnerInfo">
-                    <p className="PartnerName">{partner.name}</p>
-                    <p className="PartnerDescription">{this.shortenedDescription(partner.name, partner.description)}</p>
+                    <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} className="PartnerName">{partner.name}</p>
+                    <p style={this.props.applyStylesFxn(24, "Nunito Sans")} className="PartnerDescription">{this.shortenedDescription(partner.name, partner.description)}</p>
                   </div>
                 </button>
               )
             } else {
               return (
-                <button key={index} className="PartnerComponent Right" onClick={(e) => this.showSidePanel(e, index)}>
+                <button style={this.props.applyStylesFxn(24, "Nunito Sans")} key={index} className="PartnerComponent Right" onClick={(e) => this.showSidePanel(e, index)}>
                   <div className="PartnerInfo">
-                    <p className="PartnerName">{partner.name}</p>
-                    <p className="PartnerDescription">{this.shortenedDescription(partner.name, partner.description)}</p>
+                    <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} className="PartnerName">{partner.name}</p>
+                    <p style={this.props.applyStylesFxn(24, "Nunito Sans")} className="PartnerDescription">{this.shortenedDescription(partner.name, partner.description)}</p>
                   </div>
                   <img className="PartnerImage" src={partner.imgSrc} alt="PIE Partner" />
                 </button>
@@ -75,9 +75,9 @@ class PartnersPage extends Component {
             <button id="PartnerSideClose" onClick={this.closePanel}>X</button>
             <img id="PartnerSideImage" src={partnersJSON[this.state.selectedIdx].imgSrc} alt="PIE Partner" />
             <div id="PartnerSideInfo">
-              <p id="PartnerSideName">{partnersJSON[this.state.selectedIdx].name}</p>
-              <p id="PartnerSideDescription">{partnersJSON[this.state.selectedIdx].description}</p>
-              <a id="PartnerSideViewWebsite" href={partnersJSON[this.state.selectedIdx].websiteUrl} target="_blank">View Website</a>
+              <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} id="PartnerSideName">{partnersJSON[this.state.selectedIdx].name}</p>
+              <p style={this.props.applyStylesFxn(24, "Nunito Sans")} id="PartnerSideDescription">{partnersJSON[this.state.selectedIdx].description}</p>
+              <a style={this.props.applyStylesFxn(24, "Nunito Sans")} id="PartnerSideViewWebsite" href={partnersJSON[this.state.selectedIdx].websiteUrl} target="_blank">View Website</a>
             </div>
           </div> : <div></div>
         }

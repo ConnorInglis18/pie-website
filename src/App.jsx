@@ -94,15 +94,15 @@ class App extends Component {
           {(() => {
           switch (this.state.curPage) {
             case "LandingPage":
-              return <LandingPage showPageFxn={this.showPage}/>;
+              return <LandingPage showPageFxn={this.showPage} applyStylesFxn={this.applyStyles}/>;
             case "PartnersPage":
-              return <PartnersPage/>;
+              return <PartnersPage applyStylesFxn={this.applyStyles}/>;
             case "JoinPage":
-              return <JoinPage showPageFxn={this.showPage}/>;
+              return <JoinPage showPageFxn={this.showPage} applyStylesFxn={this.applyStyles}/>;
             case "ContactPage":
-              return <ContactPage showPageFxn={this.showPage}/>;
+              return <ContactPage showPageFxn={this.showPage} applyStylesFxn={this.applyStyles}/>;
             default:
-              return <LandingPage showPageFxn={this.showPage}/>;
+              return <LandingPage showPageFxn={this.showPage} applyStylesFxn={this.applyStyles}/>;
           }
         })()}
         </div>

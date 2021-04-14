@@ -32,8 +32,8 @@ class ContactPage extends Component {
   render() {
     return (
       <div className="ContactPage">
-        <p id="QuestionsText">Questions? We would love to hear them.</p>
-        <form id="ContactForm" type="submit" onSubmit={(event) => this.submitQuestion(
+        <p style={this.props.applyStylesFxn(24, "Nunito Sans")} id="QuestionsText">Questions? We would love to hear them.</p>
+        <form style={this.props.applyStylesFxn(24, "Nunito Sans")} id="ContactForm" type="submit" onSubmit={(event) => this.submitQuestion(
           event,
           document.getElementById("ContactName"),
           document.getElementById("ContactEmail"),
@@ -46,6 +46,7 @@ class ContactPage extends Component {
             name="ContactName"
             type="text"
             placeholder="John Doe"
+            style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
           <label>Email:</label>
@@ -54,6 +55,7 @@ class ContactPage extends Component {
             name="ContactEmail"
             type="text"
             placeholder="johndoe@email.com"
+            style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
           <label>Phone Number (optional):</label>
@@ -64,6 +66,7 @@ class ContactPage extends Component {
             placeholder="555-555-5555"
             pattern="^[0-9(). \-]+$"
             title="Invalid Phone Number"
+            style={this.props.applyStylesFxn(24, "Nunito Sans")}
           />
           <label>Comment or Question:</label>
           <textarea
@@ -72,9 +75,10 @@ class ContactPage extends Component {
             type="text"
             placeholder="Comment or question..."
             cols="4"
+            style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
-          <input type="submit" id="submitQuestion"></input>
+          <input style={this.props.applyStylesFxn(24, "Nunito Sans")} type="submit" id="submitQuestion"></input>
         </form>
       </div>
     );
