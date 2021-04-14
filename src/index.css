@@ -11,6 +11,11 @@ html {
   scroll-padding-top: 150px;
 }
 
+@font-face {
+  font-family: "OpenDyslexic2";
+  src: url("./fonts/OpenDyslexic2/OpenDyslexic-Regular.otf") format("woff2");
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

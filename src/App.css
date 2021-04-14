@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   width: 100%;
-  font-family: "Nunito Sans";
+  font-family: "OpenDyslexic2";
   font-style: normal;
   font-weight: normal;
 }
@@ -43,7 +43,6 @@ a:focus {
   bottom: -120px;
   right: -50px;
 
-
   font-size: x-large;
 }
 
@@ -61,7 +60,7 @@ a:focus {
 #accessibilityText {
   width: 442px;
   height: 120px;
-  background-color: #2F65A7;
+  background-color: #2f65a7;
   color: white;
   line-height: 120px;
 }
