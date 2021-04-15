@@ -108,16 +108,16 @@ class App extends Component {
         </div>
         {this.state.showAccessMenu ?
           <div id="accessibilityContent">
-            <div id="accessibilityText">Accessibility Menu</div>
+            <div id="accessibilityText" style={this.applyStyles(28, "Nunito Sans")}>Accessibility Menu</div>
             <div id="accessibilityBtnSection">
-              <button class="accessibilityBtn" id="increaseFontBtn" onClick={this.increaseFont}>+Font</button>
-              <button class="accessibilityBtn" id="decreaseFontBtn" onClick={this.decreaseFont}>-Font</button>
-              <button class="accessibilityBtn" id="dyslexiaFont" onClick={this.toDyslexic}>To Dyslexic</button>
-              <button class="accessibilityBtn" id="standardFont" onClick={this.fromDyslexic}>From Dyslexic</button>
+              <button class="accessibilityBtn" id="increaseFontBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.increaseFont}>+Font</button>
+              <button class="accessibilityBtn" id="decreaseFontBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.decreaseFont}>-Font</button>
+              <button class="accessibilityBtn" id="dyslexiaFont" style={this.applyStyles(24, "Nunito Sans")} onClick={this.toDyslexic}>To Dyslexic</button>
+              <button class="accessibilityBtn" id="standardFont" style={this.applyStyles(24, "Nunito Sans")} onClick={this.fromDyslexic}>From Dyslexic</button>
             </div>
-            <button id="hideAccessBtn" onClick={this.hideAccessibilityMenu}>Close</button>
+            <button id="hideAccessBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.hideAccessibilityMenu}>Close</button>
           </div>
-          : <button id="showAccessBtn" onClick={this.showAccessibilityMenu}>Accessibility Menu</button>
+          : <button id="showAccessBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.showAccessibilityMenu}>Accessibility Menu</button>
         }
       </div>
     );
