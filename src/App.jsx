@@ -5,6 +5,8 @@ import LandingPage from './LandingPage';
 import PartnersPage from './PartnersPage';
 import ContactPage from './ContactPage';
 import Header from './Header';
+import SubmittedJoinPage from './SubmittedJoinPage';
+import SubmittedContactUsPage from './SubmittedContactUsPage'
 
 class App extends Component {
   constructor(props) {
@@ -111,6 +113,10 @@ class App extends Component {
               return <JoinPage showPageFxn={this.showPage} applyStylesFxn={this.applyStyles}/>;
             case "ContactPage":
               return <ContactPage showPageFxn={this.showPage} applyStylesFxn={this.applyStyles}/>;
+            case "SubmittedJoinPage":
+              return <SubmittedJoinPage showPageFxn={this.showPage} applyStylesFxn={this.applyStyles}/>;
+            case "SubmittedContactUsPage":
+              return <SubmittedContactUsPage showPageFxn={this.showPage} applyStylesFxn={this.applyStyles}/>;
             default:
               return <LandingPage showPageFxn={this.showPage} applyStylesFxn={this.applyStyles}/>;
           }

@@ -1,0 +1,21 @@
+.SubmittedContactUsPage {
+    background-color: #00274c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    min-height: 100vh;
+    z-index: 0;
+  }
+  
+  .OKButton {
+    width: 353px;
+    height: 75px;
+    background: #ffcb05;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    line-height: 33px;
+    text-align: center;
+  
+    color: #000000;
+  }

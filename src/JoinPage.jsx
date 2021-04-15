@@ -26,8 +26,7 @@ class JoinPage extends Component {
       description.value = "";
       websiteUrl.value = "";
       mentorContact.value = "";
-      window.alert("Your form has been submitted! We will get back to you as soon as we can!")
-      this.props.showPageFxn(e, "LandingPage")
+      this.props.showPageFxn(e, "SubmittedJoinPage")
     }
   }
 
