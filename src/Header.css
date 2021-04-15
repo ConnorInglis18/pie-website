@@ -42,7 +42,7 @@
 }
 
 .partnersButton {
-  width: 180px;
+  width: 250px;
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
@@ -54,7 +54,7 @@
 }
 
 .contactButton {
-  width: 180px;
+  width: 250px;
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
@@ -66,7 +66,7 @@
 }
 
 .joinWrapper {
-  width: 200px;
+  width: 300px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -74,7 +74,7 @@
 }
 
 .joinButton {
-  width: 120px;
+  width: 250px;
   height: 60px;
   background-color: #ffcb05;
 }

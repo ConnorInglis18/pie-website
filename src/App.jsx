@@ -13,6 +13,7 @@ class App extends Component {
       counter: 0,
       curPage: "LandingPage",
       showAccessMenu: false,
+      minimizedAccessMenu: false,
       isDyslexicFont: false,
       fontMultiplier: 1
     }
@@ -23,6 +24,14 @@ class App extends Component {
         "font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : defaultFont,
         "font-size": this.state.fontMultiplier * defaultFontSize + "px"
     }
+  }
+
+  minimizeAccessibility = (e) => {
+    e.preventDefault();
+    console.log("minimizing access menu");
+    this.setState({
+      minimizedAccessMenu: true
+    })
   }
 
   componentDidMount = () => {
@@ -42,7 +51,8 @@ class App extends Component {
     console.log("open accessibility menu");
     e.preventDefault();
     this.setState({
-      showAccessMenu: true
+      showAccessMenu: true,
+      minimizedAccessMenu: false,
     });
   }
 
@@ -110,14 +120,24 @@ class App extends Component {
           <div id="accessibilityContent">
             <div id="accessibilityText" style={this.applyStyles(28, "Nunito Sans")}>Accessibility Menu</div>
             <div id="accessibilityBtnSection">
-              <button class="accessibilityBtn" id="increaseFontBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.increaseFont}>+Font</button>
-              <button class="accessibilityBtn" id="decreaseFontBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.decreaseFont}>-Font</button>
+              <button class="accessibilityBtn" id="increaseFontBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.increaseFont}>Increase Font</button>
+              <button class="accessibilityBtn" id="decreaseFontBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.decreaseFont}>Decrease Font</button>
               <button class="accessibilityBtn" id="dyslexiaFont" style={this.applyStyles(24, "Nunito Sans")} onClick={this.toDyslexic}>To Dyslexic</button>
               <button class="accessibilityBtn" id="standardFont" style={this.applyStyles(24, "Nunito Sans")} onClick={this.fromDyslexic}>From Dyslexic</button>
             </div>
             <button id="hideAccessBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.hideAccessibilityMenu}>Close</button>
           </div>
-          : <button id="showAccessBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.showAccessibilityMenu}>Accessibility Menu</button>
+          : <div id="closedAccessibilityContent">
+            {this.state.minimizedAccessMenu ?
+              <div>
+                <button id="showAccessBtnSmall" style={this.applyStyles(12, "Nunito Sans")} onClick={this.showAccessibilityMenu}>Accessibility Menu</button>
+              </div>
+              : <div>
+                <button id="showAccessBtnLarge" style={this.applyStyles(24, "Nunito Sans")} onClick={this.showAccessibilityMenu}>Accessibility Menu</button>
+                <button id="minimizeAccessButton" onClick={this.minimizeAccessibility}>-</button>
+              </div>
+            }
+          </div>
         }
       </div>
     );
