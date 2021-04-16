@@ -80,7 +80,7 @@ class PartnersPage extends Component {
           </div>
           <div className="PartnersPageList">
             {/* If the search term is empty, we always want to return everything, if it is not, then we want to return only partners whos name include the search term */}
-            {partnersJSON.filter(partner => !this.state.searchTerm.length || partner.name.includes(this.state.searchTerm)).map((partner, index) => {
+            {partnersJSON.filter(partner => !this.state.searchTerm.length || partner.name.toLowerCase().includes(this.state.searchTerm.toLowerCase())).map((partner, index) => {
               if (index % 2 === 0) {
                 return (
                   <button key={index} className="PartnerComponent Left" onClick={(e) => this.showSidePanel(e, partner)}>
