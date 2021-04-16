@@ -117,14 +117,13 @@ class App extends Component {
         </div>
         {this.state.showAccessMenu ?
           <div id="accessibilityContent">
-            <div id="accessibilityText" style={this.applyStyles(28, "Nunito Sans")}>Accessibility Menu</div>
+            <div id="accessibilityText" style={{"font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans"}}>Accessibility Menu</div>
             <div id="accessibilityBtnSection">
               <button 
                 className="accessibilityBtn"
                 id="increaseFontBtn" 
                 style={{
-                  "font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans",
-                  "font-size": 1.30 * 24 + "px"
+                  "font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans"
                 }}
                 onClick={this.increaseFont}>
                 Increase Font
@@ -138,10 +137,6 @@ class App extends Component {
               <button 
                 className="accessibilityBtn" 
                 id="dyslexiaFont" 
-                style={{
-                  "font-family": "OpenDyslexic2", 
-                  "font-size": this.state.fontMultiplier * 24 + "px"
-                }} 
                 onClick={this.toggleDyslexic}>
                 Dyslexic Font
                 <div className="toggleContainer">
@@ -150,15 +145,18 @@ class App extends Component {
                 </div>
               </button>
             </div>
-            <button id="hideAccessBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.hideAccessibilityMenu}>Close</button>
+            <div>
+              <button id="hideAccessBtn" style={{"font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans"}} onClick={this.hideAccessibilityMenu}>Close</button>
+              {/* <button id="hideAccessBtn" style={{"font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans"}} onClick={this.hideAccessibilityMenu}>Close and Minimize</button> */}
+            </div>
           </div>
           : <div id="closedAccessibilityContent">
             {this.state.minimizedAccessMenu ?
               <div>
-                <button id="showAccessBtnSmall" style={this.applyStyles(12, "Nunito Sans")} onClick={this.showAccessibilityMenu}>Accessibility Menu</button>
+                <button id="showAccessBtnSmall" style={{"font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans"}} onClick={this.showAccessibilityMenu}>Accessibility Menu</button>
               </div>
               : <div>
-                <button id="showAccessBtnLarge" style={this.applyStyles(24, "Nunito Sans")} onClick={this.showAccessibilityMenu}>Accessibility Menu</button>
+                <button id="showAccessBtnLarge" style={{"font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans"}} onClick={this.showAccessibilityMenu}>Accessibility Menu</button>
                 <button id="minimizeAccessButton" onClick={this.minimizeAccessibility}>-</button>
               </div>
             }

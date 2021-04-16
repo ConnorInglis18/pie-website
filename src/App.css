@@ -35,32 +35,41 @@ a:focus {
   align-items: center;
 
   position: fixed;
-  width: 570px;
+  width: 442px;
   height: 699px;
 
   float: right;
-  bottom: -120px;
-  right: -50px;
+  bottom: -240px;
+  right: 20px;
 
   font-size: x-large;
 }
 
 #accessibilityBtnSection {
-  display: grid;
-  grid-template-columns: 221px 221px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 442px;
   background-color: #edecec;
 }
 
 .accessibilityBtn {
-  width: 221px;
-  height: 171px;
+  width: 200px;
+  height: 180px;
+  margin: 20px 0px;
+  font-family: "OpenDyslexic2";
+  font-size: 36px;
 
-  font-size: x-large;
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 #accessibilityText {
   width: 442px;
   height: 120px;
+  font-size: 36px;
   background-color: #2f65a7;
   color: white;
   line-height: 120px;
@@ -69,19 +78,23 @@ a:focus {
 #hideAccessBtn {
   width: 442px;
   height: 100px;
-  font-size: x-large;
+  font-size: 36px;
 }
 
 #showAccessBtnLarge {
   position: fixed;
-  width: 241px;
-  height: 117px;
+  width: 270px;
+  height: 140px;
 
   float: right;
   bottom: 20px;
   right: 20px;
 
-  font-size: x-large;
+  font-size: 36px;
+  background-color: #2f65a7;
+  border: 6px solid #ffffff;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 #showAccessBtnSmall {
@@ -93,24 +106,31 @@ a:focus {
   bottom: 20px;
   right: 20px;
 
-  font-size: medium;
+  background-color: #2f65a7;
+  border: 4px solid #ffffff;
+
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 #minimizeAccessButton {
   position: fixed;
-  bottom: 101px;
-  right: 226px;
+  bottom: 136px;
+  right: 266px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px;
-  height: 36px;
-  background: rgb(219, 217, 217);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #ffcb05;
+  border: 0;
+  /* box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25); */
   /* border-radius: 40px; */
 
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 30px;
   line-height: 38px;
   display: flex;

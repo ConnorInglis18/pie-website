@@ -24,11 +24,12 @@
 
 .michiganLogo {
   height: 40px;
+  margin-left: 20px;
 }
 
 .homePage {
   height: 100px;
-  width: 200px;
+  width: 220px;
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
@@ -42,7 +43,7 @@
 }
 
 .partnersButton {
-  width: 250px;
+  width: 260px;
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
@@ -54,7 +55,7 @@
 }
 
 .contactButton {
-  width: 250px;
+  width: 260px;
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
