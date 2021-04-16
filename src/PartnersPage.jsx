@@ -9,7 +9,8 @@ class PartnersPage extends Component {
     this.state = {
       showSidePanel: false,
       selectedIdx: 0,
-      searchTerm: ""
+      searchTerm: "",
+      sidePanelPartner: {}
     }
   }
   
@@ -27,12 +28,11 @@ class PartnersPage extends Component {
     }
   }
 
-  showSidePanel = (e, index) => {
-    console.log("CLICKED " + index)
+  showSidePanel = (e, partner) => {
     e.preventDefault();
     this.setState({
       showSidePanel: true,
-      selectedIdx: index
+      sidePanelPartner: partner
     })
   }
 
@@ -83,7 +83,7 @@ class PartnersPage extends Component {
             {partnersJSON.filter(partner => !this.state.searchTerm.length || partner.name.includes(this.state.searchTerm)).map((partner, index) => {
               if (index % 2 === 0) {
                 return (
-                  <button key={index} className="PartnerComponent Left" onClick={(e) => this.showSidePanel(e, index)}>
+                  <button key={index} className="PartnerComponent Left" onClick={(e) => this.showSidePanel(e, partner)}>
                     <img className="PartnerImage" src={partner.imgSrc} alt="PIE Partner" />
                     <div className="PartnerInfo">
                       <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} className="PartnerName">{partner.name}</p>
@@ -93,7 +93,7 @@ class PartnersPage extends Component {
                 )
               } else {
                 return (
-                  <button style={this.props.applyStylesFxn(24, "Nunito Sans")} key={index} className="PartnerComponent Right" onClick={(e) => this.showSidePanel(e, index)}>
+                  <button style={this.props.applyStylesFxn(24, "Nunito Sans")} key={index} className="PartnerComponent Right" onClick={(e) => this.showSidePanel(e, partner)}>
                     <div className="PartnerInfo">
                       <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} className="PartnerName">{partner.name}</p>
                       <p style={this.props.applyStylesFxn(24, "Nunito Sans")} className="PartnerDescription">{this.shortenedDescription(partner.name, partner.description)}</p>
@@ -108,11 +108,11 @@ class PartnersPage extends Component {
         {this.state.showSidePanel ?
           <div id="PartnerSidePanel">
             <button id="PartnerSideClose" onClick={this.closePanel}>X</button>
-            <img id="PartnerSideImage" src={partnersJSON[this.state.selectedIdx].imgSrc} alt="PIE Partner" />
+            <img id="PartnerSideImage" src={this.state.sidePanelPartner.imgSrc} alt="PIE Partner" />
             <div id="PartnerSideInfo">
-              <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} id="PartnerSideName">{partnersJSON[this.state.selectedIdx].name}</p>
-              <p style={this.props.applyStylesFxn(24, "Nunito Sans")} id="PartnerSideDescription">{partnersJSON[this.state.selectedIdx].description}</p>
-              <a style={this.props.applyStylesFxn(24, "Nunito Sans")} id="PartnerSideViewWebsite" href={partnersJSON[this.state.selectedIdx].websiteUrl} target="_blank">View Website</a>
+              <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} id="PartnerSideName">{this.state.sidePanelPartner.name}</p>
+              <p style={this.props.applyStylesFxn(24, "Nunito Sans")} id="PartnerSideDescription">{this.state.sidePanelPartner.description}</p>
+              <a style={this.props.applyStylesFxn(24, "Nunito Sans")} id="PartnerSideViewWebsite" href={this.state.sidePanelPartner.websiteUrl} target="_blank">View Website</a>
             </div>
           </div> : <div></div>
         }
