@@ -8,7 +8,8 @@ class PartnersPage extends Component {
     super(props);
     this.state = {
       showSidePanel: false,
-      selectedIdx: 0
+      selectedIdx: 0,
+      searchTerm: ""
     }
   }
   
@@ -42,33 +43,67 @@ class PartnersPage extends Component {
     })
   }
 
+  removeSearchItem = (e, searchForm) => {
+    e.preventDefault();
+    searchForm.value = "";
+    this.setState({
+      searchTerm: ""
+    });
+  }
+
+  submitQuestion = (e, searchTerm) => {
+    e.preventDefault();
+    console.log(searchTerm.value)
+    this.setState({
+      searchTerm: searchTerm.value
+    });
+  }
+
   render() {
     return (
       <div className="PartnersPage">
-        <div className="PartnersPageList">
-          {partnersJSON.map((partner, index) => {
-            if (index % 2 === 0) {
-              return (
-                <button key={index} className="PartnerComponent Left" onClick={(e) => this.showSidePanel(e, index)}>
-                  <img className="PartnerImage" src={partner.imgSrc} alt="PIE Partner" />
-                  <div className="PartnerInfo">
-                    <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} className="PartnerName">{partner.name}</p>
-                    <p style={this.props.applyStylesFxn(24, "Nunito Sans")} className="PartnerDescription">{this.shortenedDescription(partner.name, partner.description)}</p>
-                  </div>
-                </button>
-              )
-            } else {
-              return (
-                <button style={this.props.applyStylesFxn(24, "Nunito Sans")} key={index} className="PartnerComponent Right" onClick={(e) => this.showSidePanel(e, index)}>
-                  <div className="PartnerInfo">
-                    <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} className="PartnerName">{partner.name}</p>
-                    <p style={this.props.applyStylesFxn(24, "Nunito Sans")} className="PartnerDescription">{this.shortenedDescription(partner.name, partner.description)}</p>
-                  </div>
-                  <img className="PartnerImage" src={partner.imgSrc} alt="PIE Partner" />
-                </button>
-              )
-            }
-          })}
+        <div className="PartnersPageContent">
+          <div className="SearchContainer">
+            <button className="SearchButton" style={this.props.applyStylesFxn(24, "Nunito Sans")}  onClick={(event) => this.submitQuestion(event, document.getElementById("SearchPartner"))}>Search</button>
+            <div className="SearchBarContainer">
+              <form type="submit" onSubmit={(event) => this.submitQuestion(event, document.getElementById("SearchPartner"))}>
+                <input
+                  id="SearchPartner"
+                  name="SearchPartner"
+                  type="text"
+                  placeholder="Search..."
+                  style={this.props.applyStylesFxn(24, "Nunito Sans")}
+                />
+              </form>
+              <button className="SearchClose" onClick={event => this.removeSearchItem(event, document.getElementById("SearchPartner"))}>X</button>
+            </div>
+          </div>
+          <div className="PartnersPageList">
+            {/* If the search term is empty, we always want to return everything, if it is not, then we want to return only partners whos name include the search term */}
+            {partnersJSON.filter(partner => !this.state.searchTerm.length || partner.name.includes(this.state.searchTerm)).map((partner, index) => {
+              if (index % 2 === 0) {
+                return (
+                  <button key={index} className="PartnerComponent Left" onClick={(e) => this.showSidePanel(e, index)}>
+                    <img className="PartnerImage" src={partner.imgSrc} alt="PIE Partner" />
+                    <div className="PartnerInfo">
+                      <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} className="PartnerName">{partner.name}</p>
+                      <p style={this.props.applyStylesFxn(24, "Nunito Sans")} className="PartnerDescription">{this.shortenedDescription(partner.name, partner.description)}</p>
+                    </div>
+                  </button>
+                )
+              } else {
+                return (
+                  <button style={this.props.applyStylesFxn(24, "Nunito Sans")} key={index} className="PartnerComponent Right" onClick={(e) => this.showSidePanel(e, index)}>
+                    <div className="PartnerInfo">
+                      <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} className="PartnerName">{partner.name}</p>
+                      <p style={this.props.applyStylesFxn(24, "Nunito Sans")} className="PartnerDescription">{this.shortenedDescription(partner.name, partner.description)}</p>
+                    </div>
+                    <img className="PartnerImage" src={partner.imgSrc} alt="PIE Partner" />
+                  </button>
+                )
+              }
+            })}
+          </div>
         </div>
         {this.state.showSidePanel ?
           <div id="PartnerSidePanel">
