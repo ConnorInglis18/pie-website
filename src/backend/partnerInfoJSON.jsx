@@ -3,19 +3,19 @@ export const partnersJSON = [
     name: "Michigan Marching Band",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     websiteUrl: "https://www.michiganmarchingband.com/",
-    imgSrc: "/images/UM-Marching-Band.png"
+    imgSrc: "https://images.squarespace-cdn.com/content/v1/5acd35095cfd7920789ec760/1591734027921-79LSZES0QBA85FXMF5SP/ke17ZwdGBToddI8pDm48kMnHRrpWSlSCB9XabjgyantZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpz4FkPJA585QYBg9EjPvRpkIxxB_SdP_xzqtxyFDizV5aadH9FfX0OATazAJGndjd8/addison-hymer.JPG"
   },
   {
     name: "Michigan SSD",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     websiteUrl: "https://ssd.umich.edu/",
-    imgSrc: "/images/SSD.jpg"
+    imgSrc: "https://ssd.umich.edu/files/ssd/styles/crop_640x480/public/m_jump.jpg?itok=YkvT74bL"
   },
   {
     name: "University Of Michigan Adaptive Sports",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     websiteUrl: "https://ssd.umich.edu/",
-    imgSrc: "/images/UM-Adaptive-Sports.jpg"
+    imgSrc: "https://uploads-ssl.webflow.com/5fa06d1f7a2d25ef7aca7f29/5fa070ce347530d860a7cedc_IMG_2668.jpeg"
   },
   {
     name: "Jane Doe",
