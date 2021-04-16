@@ -48,6 +48,7 @@ a:focus {
 #accessibilityBtnSection {
   display: grid;
   grid-template-columns: 221px 221px;
+  background-color: #edecec;
 }
 
 .accessibilityBtn {
@@ -116,4 +117,17 @@ a:focus {
   align-items: center;
   text-align: center;
   color: #131516;
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.toggleIndicator {
+  height: 10px;
+  width: 50px;
+  border-radius: 20px;
+  margin: 0px 6px;
 }

@@ -17,7 +17,8 @@ class App extends Component {
       showAccessMenu: false,
       minimizedAccessMenu: false,
       isDyslexicFont: false,
-      fontMultiplier: 1
+      fontMultiplier: 1,
+      fontLevel: 1
     }
   }
 
@@ -69,32 +70,24 @@ class App extends Component {
   increaseFont = (e) => {
     e.preventDefault();
     console.log("+font");
-    this.setState({
-      fontMultiplier: 0.15 + this.state.fontMultiplier
-    });
+    if (this.state.fontLevel >= 4) {
+      this.setState({
+        fontMultiplier: 1,
+        fontLevel: 1
+      });
+    } else {
+      this.setState({
+        fontMultiplier: 0.15 + this.state.fontMultiplier,
+        fontLevel: 1 + this.state.fontLevel
+      });
+    }
   }
 
-  decreaseFont = (e) => {
+  toggleDyslexic = (e) => {
     e.preventDefault();
-    console.log("-font");
+    console.log("toggle dyslexic");
     this.setState({
-      fontMultiplier: this.state.fontMultiplier - 0.15
-    });
-  }
-
-  toDyslexic = (e) => {
-    e.preventDefault();
-    console.log("to dyslexic");
-    this.setState({
-      isDyslexicFont: true
-    });
-  }
-
-  fromDyslexic = (e) => {
-    e.preventDefault();
-    console.log("from dyslexic");
-    this.setState({
-      isDyslexicFont: false
+      isDyslexicFont: !this.state.isDyslexicFont
     });
   }
 
@@ -126,10 +119,36 @@ class App extends Component {
           <div id="accessibilityContent">
             <div id="accessibilityText" style={this.applyStyles(28, "Nunito Sans")}>Accessibility Menu</div>
             <div id="accessibilityBtnSection">
-              <button class="accessibilityBtn" id="increaseFontBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.increaseFont}>Increase Font</button>
-              <button class="accessibilityBtn" id="decreaseFontBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.decreaseFont}>Decrease Font</button>
-              <button class="accessibilityBtn" id="dyslexiaFont" style={this.applyStyles(24, "Nunito Sans")} onClick={this.toDyslexic}>To Dyslexic</button>
-              <button class="accessibilityBtn" id="standardFont" style={this.applyStyles(24, "Nunito Sans")} onClick={this.fromDyslexic}>From Dyslexic</button>
+              <button 
+                className="accessibilityBtn"
+                id="increaseFontBtn" 
+                style={{
+                  "font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans",
+                  "font-size": 1.30 * 24 + "px"
+                }}
+                onClick={this.increaseFont}>
+                Increase Font
+                <div className="toggleContainer">
+                  <div className="toggleIndicator" style={{"background-color": this.state.fontLevel === 1 ? "#131516" : "#c4c4c4"}}></div>
+                  <div className="toggleIndicator" style={{"background-color": this.state.fontLevel === 2 ? "#131516" : "#c4c4c4"}}></div>
+                  <div className="toggleIndicator" style={{"background-color": this.state.fontLevel === 3 ? "#131516" : "#c4c4c4"}}></div>
+                  <div className="toggleIndicator" style={{"background-color": this.state.fontLevel === 4 ? "#131516" : "#c4c4c4"}}></div>
+                </div>
+              </button>
+              <button 
+                className="accessibilityBtn" 
+                id="dyslexiaFont" 
+                style={{
+                  "font-family": "OpenDyslexic2", 
+                  "font-size": this.state.fontMultiplier * 24 + "px"
+                }} 
+                onClick={this.toggleDyslexic}>
+                Dyslexic Font
+                <div className="toggleContainer">
+                  <div className="toggleIndicator" style={{"background-color": this.state.isDyslexicFont ? "#c4c4c4" : "#131516"}}></div>
+                  <div className="toggleIndicator" style={{"background-color": this.state.isDyslexicFont ? "#131516" : "#c4c4c4"}}></div>
+                </div>
+              </button>
             </div>
             <button id="hideAccessBtn" style={this.applyStyles(24, "Nunito Sans")} onClick={this.hideAccessibilityMenu}>Close</button>
           </div>
