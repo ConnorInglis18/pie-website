@@ -43,7 +43,7 @@ class JoinPage extends Component {
           document.getElementById("JoinWebsiteUrl"),
           document.getElementById("JoinMentorContact"),
         )}>
-          <label>Name:</label>
+          <label className="required-field">Name:</label>
           <input
             id="JoinName"
             name="JoinName"
@@ -52,7 +52,7 @@ class JoinPage extends Component {
             style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
-          <label>Email:</label>
+          <label className="required-field">Email:</label>
           <input
             id="JoinEmail"
             name="JoinEmail"
@@ -61,7 +61,7 @@ class JoinPage extends Component {
             style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
-          <label>Phone Number (optional):</label>
+          <label>Phone Number (Optional):</label>
           <input
             id="JoinPhoneNumber"
             name="JoinPhoneNumber"
@@ -71,7 +71,7 @@ class JoinPage extends Component {
             title="Invalid Phone Number"
             style={this.props.applyStylesFxn(24, "Nunito Sans")}
           />
-          <label>Description:</label>
+          <label className="required-field">Description:</label>
           <textarea
             id="JoinDescription"
             name="JoinDescription"
@@ -81,7 +81,7 @@ class JoinPage extends Component {
             style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
-          <label>Website URL:</label>
+          <label className="required-field">Website URL:</label>
           <input
             id="JoinWebsiteUrl"
             name="JoinWebsiteUrl"
@@ -98,14 +98,14 @@ class JoinPage extends Component {
             placeholder="johndoe@email.com, 555-555-5555, etc"
             style={this.props.applyStylesFxn(24, "Nunito Sans")}
           />
-          <label>Image:</label>
+          <label className="required-field">Image:</label>
           <input
             id="ImageUpload"
             name="ImageUpload"
             type="file"
             required
           />
-          <label>Image Description:</label>
+          <label className="required-field">Image Description:</label>
           <input
             id="ImageDescription"
             name="ImageDescription"

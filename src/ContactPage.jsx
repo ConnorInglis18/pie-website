@@ -39,7 +39,7 @@ class ContactPage extends Component {
           document.getElementById("ContactPhoneNumber"),
           document.getElementById("ContactDescription"),
         )}>
-          <label>Name:</label>
+          <label className="required-field">Name:</label>
           <input
             id="ContactName"
             name="ContactName"
@@ -48,7 +48,7 @@ class ContactPage extends Component {
             style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
-          <label>Email:</label>
+          <label className="required-field">Email:</label>
           <input
             id="ContactEmail"
             name="ContactEmail"
@@ -57,7 +57,7 @@ class ContactPage extends Component {
             style={this.props.applyStylesFxn(24, "Nunito Sans")}
             required
           />
-          <label>Phone Number (optional):</label>
+          <label>Phone Number (Optional):</label>
           <input
             id="ContactPhoneNumber"
             name="ContactPhoneNumber"
@@ -67,7 +67,7 @@ class ContactPage extends Component {
             title="Invalid Phone Number"
             style={this.props.applyStylesFxn(24, "Nunito Sans")}
           />
-          <label>Comment or Question:</label>
+          <label className="required-field">Comment or Question:</label>
           <textarea
             id="ContactDescription"
             name="ContactDescription"
