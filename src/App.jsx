@@ -29,6 +29,11 @@ class App extends Component {
     }
   }
 
+  minimizeAndHideAccessibility = (e) => {
+    this.minimizeAccessibility(e);
+    this.hideAccessibilityMenu(e);
+  }
+
   minimizeAccessibility = (e) => {
     e.preventDefault();
     console.log("minimizing access menu");
@@ -123,7 +128,8 @@ class App extends Component {
                 className="accessibilityBtn"
                 id="increaseFontBtn" 
                 style={{
-                  "font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans"
+                  "font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans",
+                  "font-size": this.state.isDyslexicFont ? "37px" : "44px"
                 }}
                 onClick={this.increaseFont}>
                 Increase Font
@@ -146,8 +152,8 @@ class App extends Component {
               </button>
             </div>
             <div>
-              <button id="hideAccessBtn" style={{"font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans"}} onClick={this.hideAccessibilityMenu}>Close</button>
-              {/* <button id="hideAccessBtn" style={{"font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans"}} onClick={this.hideAccessibilityMenu}>Close and Minimize</button> */}
+            <button id="backAccessBtn" style={{"font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans", "font-size": this.state.isDyslexicFont ? "34px" : "36px"}} onClick={this.hideAccessibilityMenu}>Exit</button>
+            <button id="minimizeAccessBtn" style={{"font-family": this.state.isDyslexicFont ? "OpenDyslexic2" : "Nunito Sans", "font-size": this.state.isDyslexicFont ? "34px" : "36px"}} onClick={this.minimizeAndHideAccessibility}>Exit & Hide</button>
             </div>
           </div>
           : <div id="closedAccessibilityContent">

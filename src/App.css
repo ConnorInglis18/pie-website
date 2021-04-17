@@ -66,6 +66,19 @@ a:focus {
   cursor: pointer;
 }
 
+.minimizeAccessibilityBtn {
+  width: 200px;
+  height: 100px;
+  margin: 20px 0px;
+  font-family: "OpenDyslexic2";
+  font-size: 36px;
+
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
 #accessibilityText {
   width: 442px;
   height: 120px;
@@ -75,10 +88,16 @@ a:focus {
   line-height: 120px;
 }
 
-#hideAccessBtn {
-  width: 442px;
+#backAccessBtn {
+  width: 221px;
   height: 100px;
-  font-size: 36px;
+  /* font-size: 36px; */
+}
+
+#minimizeAccessBtn {
+  width: 221px;
+  height: 100px;
+  /* font-size: 36px; */
 }
 
 #showAccessBtnLarge {
