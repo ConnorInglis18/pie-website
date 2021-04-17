@@ -10,7 +10,8 @@ class PartnersPage extends Component {
       showSidePanel: false,
       selectedIdx: 0,
       searchTerm: "",
-      sidePanelPartner: {}
+      sidePanelPartner: {},
+      didSearch: false
     }
   }
   
@@ -54,14 +55,26 @@ class PartnersPage extends Component {
   submitQuestion = (e, searchTerm) => {
     e.preventDefault();
     console.log(searchTerm.value)
+    console.log(this.state.didSearch)
     this.setState({
-      searchTerm: searchTerm.value
+      searchTerm: searchTerm.value,
+      didSearch: true
     });
+    setTimeout(() => {
+      this.setState({
+        didSearch: false
+      })
+    }, 50);
   }
 
   render() {
     return (
-      <div className="PartnersPage">
+      <div className="PartnersPage" style={{
+        backgroundColor: this.state.didSearch ? "lightgray" : "#edecec",
+        transition: this.state.didSearch ? "none" : "all 0.2s ease",
+        WebkitTransition: this.state.didSearch ? "none" : "all 0.2s ease",
+        MozTransition: this.state.didSearch ? "none" : "all 0.2s ease"
+      }}>
         <div className="PartnersPageContent">
           <div className="SearchContainer">
             <button className="SearchButton" style={this.props.applyStylesFxn(24, "Nunito Sans")}  onClick={(event) => this.submitQuestion(event, document.getElementById("SearchPartner"))}>Search</button>
@@ -75,7 +88,7 @@ class PartnersPage extends Component {
                   style={this.props.applyStylesFxn(24, "Nunito Sans")}
                 />
               </form>
-              <button className="SearchClose" onClick={event => this.removeSearchItem(event, document.getElementById("SearchPartner"))}>X</button>
+              <button className="SearchClose" style={{display: this.state.searchTerm.length ? "inline" : "none"}} onClick={event => this.removeSearchItem(event, document.getElementById("SearchPartner"))}>X</button>
             </div>
           </div>
           <div className="PartnersPageList">
