@@ -98,6 +98,22 @@ class JoinPage extends Component {
             placeholder="johndoe@email.com, 555-555-5555, etc"
             style={this.props.applyStylesFxn(24, "Nunito Sans")}
           />
+          <label>Image:</label>
+          <input
+            id="ImageUpload"
+            name="ImageUpload"
+            type="file"
+            required
+          />
+          <label>Image Description:</label>
+          <input
+            id="ImageDescription"
+            name="ImageDescription"
+            type="text"
+            placeholder="Please provide a short description of your image"
+            style={this.props.applyStylesFxn(24, "Nunito Sans")}
+            required
+          />
           <input style={this.props.applyStylesFxn(24, "Nunito Sans")} type="submit" id="submitRequest"></input>
         </form>
       </div>

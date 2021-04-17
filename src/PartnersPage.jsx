@@ -97,7 +97,7 @@ class PartnersPage extends Component {
               if (index % 2 === 0) {
                 return (
                   <button key={index} className="PartnerComponent Left" onClick={(e) => this.showSidePanel(e, partner)}>
-                    <img className="PartnerImage" src={partner.imgSrc} alt="PIE Partner" />
+                    <img className="PartnerImage" src={partner.imgSrc} alt={partner.altText} />
                     <div className="PartnerInfo">
                       <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} className="PartnerName">{partner.name}</p>
                       <p style={this.props.applyStylesFxn(24, "Nunito Sans")} className="PartnerDescription">{this.shortenedDescription(partner.name, partner.description)}</p>
@@ -111,7 +111,7 @@ class PartnersPage extends Component {
                       <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} className="PartnerName">{partner.name}</p>
                       <p style={this.props.applyStylesFxn(24, "Nunito Sans")} className="PartnerDescription">{this.shortenedDescription(partner.name, partner.description)}</p>
                     </div>
-                    <img className="PartnerImage" src={partner.imgSrc} alt="PIE Partner" />
+                    <img className="PartnerImage" src={partner.imgSrc} alt={partner.altText} />
                   </button>
                 )
               }
@@ -121,7 +121,7 @@ class PartnersPage extends Component {
         {this.state.showSidePanel ?
           <div id="PartnerSidePanel">
             <button id="PartnerSideClose" onClick={this.closePanel}>X</button>
-            <img id="PartnerSideImage" src={this.state.sidePanelPartner.imgSrc} alt="PIE Partner" />
+            <img id="PartnerSideImage" src={this.state.sidePanelPartner.imgSrc} alt={this.state.sidePanelPartner.altText} />
             <div id="PartnerSideInfo">
               <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} id="PartnerSideName">{this.state.sidePanelPartner.name}</p>
               <p style={this.props.applyStylesFxn(24, "Nunito Sans")} id="PartnerSideDescription">{this.state.sidePanelPartner.description}</p>
