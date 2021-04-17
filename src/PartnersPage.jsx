@@ -125,7 +125,7 @@ class PartnersPage extends Component {
             <div id="PartnerSideInfo">
               <p style={this.props.applyStylesFxn(48, "IBM Plex Sans Condensed")} id="PartnerSideName">{this.state.sidePanelPartner.name}</p>
               <p style={this.props.applyStylesFxn(24, "Nunito Sans")} id="PartnerSideDescription">{this.state.sidePanelPartner.description}</p>
-              <a style={this.props.applyStylesFxn(24, "Nunito Sans")} id="PartnerSideViewWebsite" href={this.state.sidePanelPartner.websiteUrl} target="_blank">View Website</a>
+              <a style={this.props.applyStylesFxn(24, "Nunito Sans")} id="PartnerSideViewWebsite" href={this.state.sidePanelPartner.websiteUrl} target="_blank">View Partner's Website</a>
             </div>
           </div> : <div></div>
         }
